@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(name= "ms-catalogo-cliente", path = "/cliente")
-public interface ClienteFeign {
+public interface    ClienteFeign {
     @GetMapping("/{id}")
     @CircuitBreaker(name = "clienteListarPorIdCB", fallbackMethod = "fallBackCliente")
     public ResponseEntity<ClienteDto> listarPorld(@PathVariable(required = true) Integer id);

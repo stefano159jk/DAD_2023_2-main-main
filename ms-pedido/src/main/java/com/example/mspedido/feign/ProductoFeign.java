@@ -15,7 +15,7 @@ public interface ProductoFeign {
     public ResponseEntity<ProductoDto> listarPorId(@PathVariable(required = true) Integer id);
     default ResponseEntity<ProductoDto>fallBackProducto(Integer id, Exception e) {
         ProductoDto productoDto = new ProductoDto();
-        productoDto.setId(9000000);
+        productoDto.setId(50000);
         return  ResponseEntity.ok(productoDto);
     }
 }
