@@ -15,3 +15,4 @@ public interface AuthUserService {
 
     public TokenDto validate(String token);
 }
+
